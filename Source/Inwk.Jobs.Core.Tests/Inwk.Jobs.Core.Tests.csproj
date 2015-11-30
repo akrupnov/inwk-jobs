@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="InvoiceCalculatorTest.cs" />
+    <Compile Include="InvoiceWriterTests.cs" />
     <Compile Include="JobReaderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

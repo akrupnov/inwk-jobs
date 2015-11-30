@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\packages\iTextSharp.5.5.7\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -61,6 +64,8 @@
     <Compile Include="Domain\TaxationType.cs" />
     <Compile Include="Input\IJobReader.cs" />
     <Compile Include="Input\YamlJobReader.cs" />
+    <Compile Include="Output\IInvoiceWriter.cs" />
+    <Compile Include="Output\PdfInvoiceWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

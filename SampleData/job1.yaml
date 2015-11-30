@@ -1,0 +1,8 @@
+Name: Job 1
+RequiresExtraMargin: true
+Items:
+- Name: envelopes
+  Cost: 520.00
+- Name: letterhead
+  Cost: 1983.37
+  Taxation: TaxFree

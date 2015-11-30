@@ -1,0 +1,9 @@
+Name: Job 3
+RequiresExtraMargin: true
+Items:
+- Name: frisbees
+  Cost: 19385.38
+  Taxation: TaxFree
+- Name: yo-yos
+  Cost: 1829
+  Taxation: TaxFree

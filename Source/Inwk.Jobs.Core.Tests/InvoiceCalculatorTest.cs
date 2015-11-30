@@ -37,9 +37,9 @@ namespace Inwk.Jobs.Core.Tests
             var invoice = new InvoiceCalculator().Calculate(job, "Customer");
 
             Assert.IsNotNull("invoice");
-            Assert.AreEqual(2940.30m, invoice.TotalAmount);
             Assert.AreEqual(556.40m, invoice.Items.Single(x => x.Name == "envelopes").Amount);
             Assert.AreEqual(1983.37m, invoice.Items.Single(x => x.Name == "letterhead").Amount);
+            Assert.AreEqual(2940.30m, invoice.TotalAmount, "Total amount is incorrect");
         }
 
         [Test]
@@ -63,8 +63,8 @@ namespace Inwk.Jobs.Core.Tests
             var invoice = new InvoiceCalculator().Calculate(job, "Customer");
 
             Assert.IsNotNull("invoice");
-            Assert.AreEqual(346.96m, invoice.TotalAmount);
             Assert.AreEqual(314.62m, invoice.Items.Single(x => x.Name == "t-shirts").Amount);
+            Assert.AreEqual(346.96m, invoice.TotalAmount, "Total amount is incorrect");
         }
 
         [Test]
@@ -95,9 +95,9 @@ namespace Inwk.Jobs.Core.Tests
             var invoice = new InvoiceCalculator().Calculate(job, "Customer");
 
             Assert.IsNotNull("invoice");
-            Assert.AreEqual(19385.38m, invoice.TotalAmount);
-            Assert.AreEqual(1829.00m, invoice.Items.Single(x => x.Name == "frisbees").Amount);
-            Assert.AreEqual(1983.37m, invoice.Items.Single(x => x.Name == "yo-yos").Amount);
+            Assert.AreEqual(19385.38m, invoice.Items.Single(x => x.Name == "frisbees").Amount);
+            Assert.AreEqual(1829.00m, invoice.Items.Single(x => x.Name == "yo-yos").Amount);
+            Assert.AreEqual(24608.68m, invoice.TotalAmount, "Total amount is incorrect");
         }
     }
 

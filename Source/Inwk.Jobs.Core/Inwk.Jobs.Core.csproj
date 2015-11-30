@@ -41,6 +41,10 @@
   <ItemGroup>
     <Compile Include="Commerce\IInvoiceCalculator.cs" />
     <Compile Include="Commerce\InvoiceCalculator.cs" />
+    <Compile Include="Commerce\IPrintItemCalculationStrategy.cs" />
+    <Compile Include="Commerce\PrintItemCalculationStrategy.cs" />
+    <Compile Include="Commerce\StandardTaxCalulcationStrategy.cs" />
+    <Compile Include="Commerce\TaxFreeItemCalculationStrategy.cs" />
     <Compile Include="Domain\Invoicing\Invoice.cs" />
     <Compile Include="Domain\Invoicing\LineItem.cs" />
     <Compile Include="Domain\Job.cs" />

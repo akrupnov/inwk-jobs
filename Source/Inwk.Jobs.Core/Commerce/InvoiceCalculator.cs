@@ -16,9 +16,14 @@ namespace Inwk.Jobs.Core.Commerce
                 throw new ArgumentNullException("job");
             }
 
-            var invoice = new Invoice() {Customer = customerName, Date = DateTime.Now, Items = new List<LineItem>()};
-
-            invoice.Items = job.Items.Select(GetLineItem).ToList();
+            var invoice = new Invoice
+            {
+                Customer = customerName,
+                Date = DateTime.Now,
+                Items = job.Items.Select(GetLineItem).ToList()
+            };
+            invoice.TotalAmount = GetTotalCaclulationStrategy(job).Calculate(invoice.Items.ToList());
+            
 
             return invoice;
         }
@@ -35,6 +40,21 @@ namespace Inwk.Jobs.Core.Commerce
             };
         }
 
+        private ITotalCaclulationStrategy GetTotalCaclulationStrategy(Job job)
+        {
+            if (job.RequiresExtraMargin)
+            {
+                return new ExtraMarginCalculationStrategy();
+            }
+
+            return new StandardMarginCalculationStrategy();
+        }
+
+        /// <summary>
+        /// Decides best calculation strategy for a line item
+        /// </summary>
+        /// <param name="printItem"></param>
+        /// <returns></returns>
         private IPrintItemCalculationStrategy GetItemStrategy(Domain.PrintItem printItem)
         {
             if (printItem.Taxation == TaxationType.Standard)

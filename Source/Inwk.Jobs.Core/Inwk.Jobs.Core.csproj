@@ -39,12 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commerce\ExtraMarginCalculationStrategy.cs" />
     <Compile Include="Commerce\IInvoiceCalculator.cs" />
     <Compile Include="Commerce\InvoiceCalculator.cs" />
+    <Compile Include="Commerce\ITotalCaclulationStrategy.cs" />
     <Compile Include="Commerce\PrintItem\IPrintItemCalculationStrategy.cs" />
     <Compile Include="Commerce\PrintItem\PrintItemCalculationStrategy.cs" />
     <Compile Include="Commerce\PrintItem\StandardTaxCalulcationStrategy.cs" />
     <Compile Include="Commerce\PrintItem\TaxFreeItemCalculationStrategy.cs" />
+    <Compile Include="Commerce\StandardMarginCalculationStrategy.cs" />
     <Compile Include="Domain\Invoicing\Invoice.cs" />
     <Compile Include="Domain\Invoicing\LineItem.cs" />
     <Compile Include="Domain\Job.cs" />

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Inwk.Jobs.Core.Commerce.PrintItem;
 using Inwk.Jobs.Core.Domain;
 using Inwk.Jobs.Core.Domain.Invoicing;
 
@@ -22,7 +23,7 @@ namespace Inwk.Jobs.Core.Commerce
             return invoice;
         }
 
-        private LineItem GetLineItem(PrintItem printItem)
+        private LineItem GetLineItem(Domain.PrintItem printItem)
         {
             var strategy = GetItemStrategy(printItem);
 
@@ -34,7 +35,7 @@ namespace Inwk.Jobs.Core.Commerce
             };
         }
 
-        private IPrintItemCalculationStrategy GetItemStrategy(PrintItem printItem)
+        private IPrintItemCalculationStrategy GetItemStrategy(Domain.PrintItem printItem)
         {
             if (printItem.Taxation == TaxationType.Standard)
             {

@@ -1,13 +1,11 @@
-﻿using Inwk.Jobs.Core.Domain;
-
-namespace Inwk.Jobs.Core.Commerce
+﻿namespace Inwk.Jobs.Core.Commerce.PrintItem
 {
     /// <summary>
     /// Calculates amount, tax free
     /// </summary>
     public class TaxFreeItemCalculationStrategy : PrintItemCalculationStrategy
     {
-        public override decimal CalculateTax(PrintItem item)
+        public override decimal CalculateTax(Domain.PrintItem item)
         {
             return 0.00m;
         }

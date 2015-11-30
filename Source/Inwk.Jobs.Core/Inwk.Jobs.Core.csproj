@@ -41,10 +41,10 @@
   <ItemGroup>
     <Compile Include="Commerce\IInvoiceCalculator.cs" />
     <Compile Include="Commerce\InvoiceCalculator.cs" />
-    <Compile Include="Commerce\IPrintItemCalculationStrategy.cs" />
-    <Compile Include="Commerce\PrintItemCalculationStrategy.cs" />
-    <Compile Include="Commerce\StandardTaxCalulcationStrategy.cs" />
-    <Compile Include="Commerce\TaxFreeItemCalculationStrategy.cs" />
+    <Compile Include="Commerce\PrintItem\IPrintItemCalculationStrategy.cs" />
+    <Compile Include="Commerce\PrintItem\PrintItemCalculationStrategy.cs" />
+    <Compile Include="Commerce\PrintItem\StandardTaxCalulcationStrategy.cs" />
+    <Compile Include="Commerce\PrintItem\TaxFreeItemCalculationStrategy.cs" />
     <Compile Include="Domain\Invoicing\Invoice.cs" />
     <Compile Include="Domain\Invoicing\LineItem.cs" />
     <Compile Include="Domain\Job.cs" />
@@ -52,6 +52,7 @@
     <Compile Include="Domain\TaxationType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

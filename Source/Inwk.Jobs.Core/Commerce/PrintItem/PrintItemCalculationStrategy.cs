@@ -1,19 +1,18 @@
 ﻿using System;
-using Inwk.Jobs.Core.Domain;
 
-namespace Inwk.Jobs.Core.Commerce
+namespace Inwk.Jobs.Core.Commerce.PrintItem
 {
     /// <summary>
     /// Base print item strategy
     /// </summary>
     public abstract class PrintItemCalculationStrategy : IPrintItemCalculationStrategy
     {
-        public virtual decimal CalculateTotal(PrintItem item)
+        public virtual decimal CalculateTotal(Domain.PrintItem item)
         {
             return Round(item.Cost);
         }
 
-        public abstract decimal CalculateTax(PrintItem item);
+        public abstract decimal CalculateTax(Domain.PrintItem item);
 
         protected Decimal Round(decimal amount)
         {

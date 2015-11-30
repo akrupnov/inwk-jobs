@@ -1,6 +1,4 @@
-﻿using Inwk.Jobs.Core.Domain;
-
-namespace Inwk.Jobs.Core.Commerce
+﻿namespace Inwk.Jobs.Core.Commerce.PrintItem
 {
     /// <summary>
     /// Calculates item amount with standard sales tax
@@ -12,12 +10,12 @@ namespace Inwk.Jobs.Core.Commerce
         /// </summary>
         private const decimal TaxAmount = 0.07m;
 
-        public override decimal CalculateTotal(PrintItem item)
+        public override decimal CalculateTotal(Domain.PrintItem item)
         {
             return Round(item.Cost + item.Cost*TaxAmount);
         }
 
-        public override decimal CalculateTax(PrintItem item)
+        public override decimal CalculateTax(Domain.PrintItem item)
         {
             return Round(item.Cost*TaxAmount);
         }

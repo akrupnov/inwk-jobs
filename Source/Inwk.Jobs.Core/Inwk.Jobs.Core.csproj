@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Invoicing\Invoice.cs" />
+    <Compile Include="Domain\Invoicing\LineItem.cs" />
     <Compile Include="Domain\Job.cs" />
     <Compile Include="Domain\PrintItem.cs" />
     <Compile Include="Domain\TaxationType.cs" />
